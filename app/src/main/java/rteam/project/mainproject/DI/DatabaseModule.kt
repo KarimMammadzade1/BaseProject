@@ -24,4 +24,8 @@ object DatabaseModule {
     @Provides
     fun getDao(db: RoomDatabase) = db.roomDataAccessObject()
 
+    @Singleton
+    @Provides
+    fun getApplicationContext(@ApplicationContext context: Context) = context
+
 }
